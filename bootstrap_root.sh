@@ -10,8 +10,8 @@ yum install -y git
 yum install -y \
 	make glibc-headers glibc-devel patch bzip2 libgfortran bzip2-devel \
 	flex bison which ncurses-devel zlib-devel which \
-	libXext libSM libXrender \ # for matplotlib
-	readline-devel \ # for freedts
+	libXext libSM libXrender \
+	readline-devel
 
 # Add the 'build' user
 useradd build

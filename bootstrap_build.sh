@@ -8,8 +8,9 @@ cd conda-lsst
 git checkout $CONDA_LSST_BRANCH
 ./bin/bootstrap.sh
 
-# Change the recipes directory
+# Change the recipes directory, and the recipe cache directory
 sed -i 's|^output_dir:.*|output_dir: /builds/recipes|' "$HOME"/conda-lsst/etc/config.yaml
+sed -i 's|recipe_db_dir:.*|recipe_db_dir: /builds/recipe-db-cache|' "$HOME"/conda-lsst/etc/config.yaml
 
 # Fix up the conda-build bug du jour.
 sed -i 's|assert "conda-bld/git_cache" in cache_dir|pass|' "$HOME"/conda-lsst/miniconda/lib/python2.7/site-packages/conda_build/environ.py
