@@ -12,3 +12,5 @@ USER    500
 WORKDIR /home/build
 
 RUN    /bootstrap_build.sh
+
+USER    0
